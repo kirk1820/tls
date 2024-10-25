@@ -1,0 +1,9 @@
+.bg-dark {
+    background-color: #213A8F !important;
+}
+.btn-primary {
+    --bs-btn-color: #213A8F;
+    --bs-btn-bg: #FFD600;
+    --bs-btn-border-color: #FFD600;
+    --bs-btn-font-weight: 600;
+}
