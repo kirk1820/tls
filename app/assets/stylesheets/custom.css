@@ -3,7 +3,14 @@
 }
 .btn-primary {
     --bs-btn-color: #213A8F;
-    --bs-btn-bg: #FFD600;
-    --bs-btn-border-color: #FFD600;
+    --bs-btn-bg: #ffc800;
+    --bs-btn-border-color: #FFc800;
+    --bs-btn-active-color: #fff;
+    
+    --bs-btn-active-bg: #0065CB;
     --bs-btn-font-weight: 600;
+}
+.bg-light {
+
+    background-color: #dee2e6 !important;
 }
