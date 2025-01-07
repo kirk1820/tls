@@ -27,6 +27,7 @@ end
 
 gem "cssbundling-rails", "~> 1.4"
 gem "jsbundling-rails", "~> 1.3"
-gem "bootstrap"
+gem "bootstrap", "~> 5.0"
+gem "bootstrap_form", "~> 5.4"
 gem "sassc-rails"
 gem "bcrypt"
