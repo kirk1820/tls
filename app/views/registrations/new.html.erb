@@ -1,0 +1,12 @@
+<div class="row align-items-center g-lg-5 py-5">
+    <h1>Sign up</h1>
+    <%= bootstrap_form_with(model: @user, url: registrations_path, local: true) do |f| %>
+    <%= f.text_field :first_name %>
+    <%= f.text_field :surname %>
+    <%= f.date_field :date_of_birth %>
+    <%= f.email_field :email %>
+    <%= f.password_field :password %>
+    <%= f.password_field :password_confirmation %>
+    <%= f.submit "Sign Up", class: "btn btn-primary"%>
+    <% end %>
+</div>

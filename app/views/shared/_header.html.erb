@@ -25,24 +25,15 @@
         </li>
       </ul>
       <ul class="nav-item">
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
-          Log in
+        <button type="button" class="btn btn-primary">
+          <%= link_to "Log in", new_session_path, class:"nav-link" %>
         </button>
-        <!-- Modal Log in-->
-        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-              <%= render 'log_in/log_in'%>
-        </div>
+        
       </ul>
       <ul class="nav-item">
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#SignupModal">
-          Sign Up
+        <button type="button" class="btn btn-primary">
+          <%= link_to "Sign up", new_registrations_path, class:"nav-link" %>
         </button>
-        <!-- Modal Sign Up in-->
-        <div class="modal fade" id="SignupModal" tabindex="-1" aria-labelledby="SignupModalLabel" aria-hidden="true">
-          <%= render 'registration/new'%>
-        </div>
       </ul>
     </div>
   </div>
