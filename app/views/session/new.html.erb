@@ -1,8 +1,0 @@
-<div class="row align-items-center g-lg-5 py-5">
-    <%= bootstrap_form_with(model: @user, url: session_path, local: true) do |f| %>
-    <%= f.email_field :email %>
-    <%= f.password_field :password, help: 'A good password should be at least six characters long' %>
-    <%= f.check_box :remember_me %>
-    <%= f.submit "Log In", class: "btn btn-primary"%>
-    <% end %>
-</div>
