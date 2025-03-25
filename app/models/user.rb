@@ -3,6 +3,7 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 6 }
   validates :password_confirmation, presence: true
   validates :email, presence: true, uniqueness: true
+  normalizes :email, ->(email) { email.strip.downcase }
   validates :firstname, presence: true
   validates :surname, presence: true
   validates :dob, presence: true
