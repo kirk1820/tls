@@ -5,11 +5,11 @@ one:
   surname: MyString
   dob: 2025-01-07
   email: MyString
-  password_digest: MyString
+  password: MyString
 
 two:
   firstname: MyString
   surname: MyString
   dob: 2025-01-07
   email: MyString
-  password_digest: MyString
+  password: MyString

@@ -34,3 +34,5 @@ gem "bootstrap", "~> 5.0"
 gem "bootstrap_form", "~> 5.4"
 gem "sassc-rails"
 gem "bcrypt"
+
+gem "devise", "~> 4.9"

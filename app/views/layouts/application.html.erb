@@ -21,11 +21,23 @@
     <% if user_signed_in? %>
       <%= render 'shared/signed_in_header'%>
       <div class="container">
+        <% if notice %>
+          <p class="alert alert-success"><%= notice %></p>
+        <% end %>
+        <% if alert %>
+          <p class="alert alert-danger"><%= alert %></p>
+        <% end %>
         <%= yield %>
       </div>
     <% else %>  
     <%= render 'shared/header'%>
     <div class="container">
+      <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
       <%= yield %>
     </div>
     <% end %>
