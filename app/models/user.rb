@@ -10,8 +10,10 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :date_of_birth, presence: true
-end
+  enum role: { user: "user", admin: "admin", super_admin: "super_admin" }, _default: "user"
 
-def full_name
-  "#{first_name} #{last_name}"
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
 end
