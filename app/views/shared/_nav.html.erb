@@ -14,13 +14,26 @@
         </li>
       </ul>
       <ul class="navbar-nav">
-        <% if user_signed_in?%>  
-        <li class="nav-item">
-            <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
+        <% if user_signed_in? %>
+        <li class="nav-item dropdown">
+          <button class="btn btn-primary dropdown-toggle d-flex align-items-center" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+            </svg>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+            <li>
+              <%= link_to "Edit Details", edit_user_registration_path, class: "dropdown-item" %>
+            </li>
+            <li>
+              <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item", form: { data: { turbo: false } } %>
+            </li>
+          </ul>
         </li>
         <% else %>
         <li class="nav-item">
-            <%= button_to "Log in", new_user_session_path, class: "btn btn-primary" %>
+          <%= button_to "Log in", new_user_session_path, class: "btn btn-primary" %>
         </li>
         <% end %>
       </ul>
